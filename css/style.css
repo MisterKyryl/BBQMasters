@@ -412,9 +412,9 @@ body::after {
   object-fit: contain
 }
 [data-parallax-text] {
-  transition: -webkit-transform .01s ease-out;
-  transition: transform .01s ease-out;
-  transition: transform .01s ease-out,-webkit-transform .01s ease-out
+  transition: -webkit-transform .1s ease-out;
+  transition: transform .1s ease-out;
+  transition: transform .1s ease-out,-webkit-transform .1s ease-out
 }
 .slider-popup-category__slide {
   display: none;
