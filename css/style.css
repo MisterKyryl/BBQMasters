@@ -411,6 +411,11 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain
 }
+[data-parallax-text] {
+  transition: -webkit-transform .03s linear 0s;
+  transition: transform .03s linear 0s;
+  transition: transform .03s linear 0s,-webkit-transform .03s linear 0s
+}
 .slider-popup-category__slide {
   display: none;
   justify-content: center
