@@ -448,14 +448,15 @@ body::after {
   opacity: 0
 }
 ._watcher-view._animation-block {
+  will-change: opacity,transform;
   -webkit-animation: animation-block .6s ease-out 0s forwards;
   animation: animation-block .6s ease-out 0s forwards
 }
 @-webkit-keyframes animation-block {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(6.25rem);
-    transform: translateY(6.25rem)
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px)
   }
   100% {
     opacity: 1;
@@ -466,8 +467,8 @@ body::after {
 @keyframes animation-block {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(6.25rem);
-    transform: translateY(6.25rem)
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px)
   }
   100% {
     opacity: 1;
