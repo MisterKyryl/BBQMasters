@@ -5,10 +5,13 @@
 	<title>BBQ Masters</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241107195807">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20241114172040">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,7 +19,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo">
+				<a href="index.html" class="header__logo">
 					<img class="header__picture" src="img/logo.svg" alt="Image">
 				</a>
 				<div class="header__menu menu">
@@ -24,12 +27,12 @@
 						<button type="button" class="menu__icon icon-menu icon-menu--absolute"><span></span></button>
 						<a href="#" class="menu__logo header__logo"><img class="header__picture" src="img/logo.svg" alt="Image"></a>
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Пропозиції</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Кому підійде</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Чому нас обирають</a></li>
+							<li class="menu__item"><a href="#" data-goto="#offers" data-goto-header class="menu__link">Пропозиції</a></li>
+							<li class="menu__item"><a href="#" data-goto="#category" data-goto-header class="menu__link">Кому підійде</a></li>
+							<li class="menu__item"><a href="#" data-goto="#about" data-goto-header class="menu__link">Чому нас обирають</a></li>
 						</ul>
 						<div class="menu__actions">
-							<a href="tel:380731371001" class="menu__button button button--fw">Зателефонуйте мені</a>
+							<a href="tel:380731371001" class="menu__button button">Зателефонуйте мені</a>
 							<a href="tel:380731371001" class="menu__phone">+38 (073) 137 10 01</a>
 						</div>
 					</nav>
@@ -42,49 +45,328 @@
 		</header>
 		<main class="page">
 			<section class="page__main main">
-				<div class="main__container">
-					<h1 class="main__title">
+				<div data-watch data-watch-once class="main__container _animation-block">
+					<h1 data-parallax-text="0.75" class="main__title">
 						Заробляйте від 10 до <span>200 тисяч</span> грн на місяць
 					</h1>
-					<p class="main__text">Cпівпрацюючи з виробничою компанією "BBQ MASTERS"</p>
-					<a href="#" class="main__button button button--fw">отримати прайс</a>
+					<p data-parallax-text="0.75" class="main__text">Cпівпрацюючи з виробничою компанією "BBQ MASTERS"</p>
+					<a data-parallax-text="0.75" href="#" class="main__button button button--fw">отримати прайс</a>
 				</div>
 				<div class="main__image">
 					<div class="main__picture"></div>
 				</div>
 			</section>
-			<div class="lorem">
-				<div class="lorem__container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia sint voluptas officiis nostrum dolor deleniti dicta, eligendi
-					odit! Harum minus veniam quam obcaecati nobis nesciunt quibusdam ratione vitae dolore.
-					<br>
-					<br>
+			<section id="offers" class="page__offers offers">
+				<div class="offers__container">
+					<h2 class="offers__title">
+						Ми допоможемо визначити вид співпраці
+						який підходить саме для вас
+					</h2>
+					<p class="offers__text">
+						Оберіть один або більше та отримайте пропозицію
+					</p>
+					<div action="#" class="offers__form form-offers">
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_1" class="form-offers__input checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="form-offers_1" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">У вас є
+									магазин на
+									<span class="form-offers__text--red">Prom, OLX, Rozetka, Zakupka</span> чи іншому маркетплейсі і ви хочете отримувати
+									більше прибутку</span></label>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_2" class="form-offers__input checkbox__input" type="checkbox" value="2" name="form[]">
+							<label for="form-offers_2" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">
+									Хочете відкрити <span class="form-offers__text--red">онлайн або офлайн</span> магазин і не можете визначиться з
+									тематикою
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_3" class="form-offers__input checkbox__input" type="checkbox" value="3" name="form[]">
+							<label for="form-offers_3" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">
+									У вас є магазин в будь-якій з <span class="form-offers__text--red">країн світу</span> (крім країн агресорів)
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_4" class="form-offers__input checkbox__input" type="checkbox" value="4" name="form[]">
+							<label for="form-offers_4" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">
+									Ви <span class="form-offers__text--red">блогер</span> і хочете отримувати додатковий дохід
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_5" class="form-offers__input checkbox__input" type="checkbox" value="5" name="form[]">
+							<label for="form-offers_5" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">
+									У вас <span class="form-offers__text--red">магазин</span> з товарами для приватного будинку, кепінгу, риболовлі,
+									полювання, чи хоббі
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="form-offers__checkbox checkbox _animation-block">
+							<input id="form-offers_6" class="form-offers__input checkbox__input" type="checkbox" value="6" name="form[]">
+							<label for="form-offers_6" class="form-offers__label checkbox__label"><span class="form-offers__text checkbox__text">
+									Ви <span class="form-offers__text--red">підприємець-початківець</span> і хочете спробувати перший бізнес не закуповуючи
+									товар
+						</div>
+						<a data-watch data-watch-once data-watch-margin="-200px" href="#" data-popup="#popup-category" class="form-offers__button button button--fw _animation-block">Отримати пропозицію</a>
+					</div>
+				</div>
+			</section>
+			<div id="category" class="page__category category">
+				<div class="category__container">
+					<h2 class="category__title">
+						Обирайте те, що більше підходить Вам
+					</h2>
+					<div class="category__body">
+						<div data-watch data-watch-once data-watch-margin="-200px" class="category__item item-category _animation-block">
+							<div div class="item-category__top">
+								<h4 class="item-category__title">Дропшипінг</h4>
+								<div class="item-category__image">
+									<img src="img/category/01.svg" class="item-category__picture item-category__picture-01" alt="Image">
+								</div>
+							</div>
+							<ul class="item-category__list">
+								<li class="item-category__item">
+									Допомагаємо розмістити наш товар на Вашому інтерет ресурсі
+								</li>
+								<li class="item-category__item">
+									Отримуєте заявку і продаєте товар
+								</li>
+								<li class="item-category__item">
+									Ми відправляємо товар Вашому клієнту з нашого складу
+								</li>
+								<li class="item-category__item">
+									Ви отримуєте свою комісію не виходячи з дому
+								</li>
+							</ul>
+							<button type="button" class="item-category__button button">
+								прайс дропшиппінг
+							</button>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="category__item item-category _animation-block">
+							<div div class="item-category__top">
+								<h4 class="item-category__title">ОПТ</h4>
+								<div class="item-category__image">
+									<img src="img/category/02.svg" class="item-category__picture item-category__picture-02" alt="Image">
+								</div>
+							</div>
+							<ul class="item-category__list">
+								<li class="item-category__item">
+									Купуєте товар собі на склад
+								</li>
+								<li class="item-category__item">
+									Особисто переконуєтеся у високій якості продукції
+								</li>
+								<li class="item-category__item">
+									Презентуєте товар своїм клієнтам,
+									що дасть змогу легко робити продажі
+								</li>
+								<li class="item-category__item">
+									Отримуєте максимальну комісію, збільшуючи свій дохід
+								</li>
+							</ul>
+							<button type="button" class="item-category__button button">
+								оптовий прайс
+							</button>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="category__item item-category _animation-block">
+							<div div class="item-category__top">
+								<h4 class="item-category__title">Дилерство</h4>
+								<div class="item-category__image">
+									<img src="img/category/03.svg" class="item-category__picture item-category__picture-03" alt="Image">
+								</div>
+							</div>
+							<ul class="item-category__list">
+								<li class="item-category__item">
+									Укладаємо офіційний договір
+								</li>
+								<li class="item-category__item">
+									Закріплюємо за вами особистого
+									менеджера
+								</li>
+								<li class="item-category__item">
+									Надаємо рекламну підтримку
+								</li>
+								<li class="item-category__item">
+									Отримуєте дилерську знижку
+								</li>
+								<li class="item-category__item">
+									Приводимо до вас клієнтів
+								</li>
+							</ul>
+							<button type="button" class="item-category__button button">
+								дилерський прайс
+							</button>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="category__item item-category _animation-block">
+							<div div class="item-category__top">
+								<h4 class="item-category__title">Блогерство</h4>
+								<div class="item-category__image">
+									<img src="img/category/04.svg" class="item-category__picture item-category__picture-04" alt="Image">
+								</div>
+							</div>
+							<ul class="item-category__list">
+								<li class="item-category__item">
+									Надаємо наше обладнання
+									для реклами
+								</li>
+								<li class="item-category__item">
+									Можливість отримувати кешбек з кожного замовлення вашої аудиторії
+								</li>
+								<li class="item-category__item">
+									Якісний товар, ви отримаєте тільки позитивні відгуки від аудиторії
+								</li>
+								<li class="item-category__item">
+									Широкий асортимент товару-підійде під більшість каналів
+								</li>
+							</ul>
+							<button type="button" class="item-category__button button">
+								Прайс для блогерів
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
+			<section id="about" class="page__about about">
+				<div class="about__container">
+					<h2 class="about__title">
+						Чому варто обрати нас
+					</h2>
+					<div class="about__body">
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/01.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								Ми - виробник
+							</h4>
+							<p class="item-about__text">
+								Тому можемо запропонувати вам найвигідніші ціни
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/02.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								мы даємо гарантію
+							</h4>
+							<p class="item-about__text">
+								На всю продукцію
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/03.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								ми експортуємо
+							</h4>
+							<p class="item-about__text">
+								В країни Європи та світу, оформляємо сертифікати Євро1, СТ1...
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/04.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								ми допомагаємо
+							</h4>
+							<p class="item-about__text">
+								З розміщенням тавору <br> на вашому сайті
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/05.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								ми рекламуємо
+							</h4>
+							<p class="item-about__text">
+								Якщо у вас офлайн магазин - ми розмістимо інформацію про нього в наших інтернет джерелах
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/06.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								ми ділимося
+							</h4>
+							<p class="item-about__text">
+								Інформацією про ТОПи найбільш продаваних товарів
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/07.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								Ми впізнавані
+							</h4>
+							<p class="item-about__text">
+								Являємось найбільш впізнаваним брендом в Україні, що допоможе вам легше отримувати клієнтів
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/08.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								Більше 10 років
+							</h4>
+							<p class="item-about__text">
+								Працюємо на ринку коптилень та устаткування для барбек’ю
+							</p>
+						</div>
+						<div data-watch data-watch-once data-watch-margin="-200px" class="about__item item-about _animation-block">
+							<div class="item-about__image">
+								<img src="img/about/09.svg" class="item-about__picture" alt="Image">
+							</div>
+							<h4 class="item-about__title">
+								ми оперативні
+							</h4>
+							<p class="item-about__text">
+								Гарантуємо оперативну обробку замовлень і своєчасну доставку.
+							</p>
+						</div>
+					</div>
+					<div data-watch data-watch-once data-watch-margin="-200px" class="about__bottom bottom-about _animation-block">
+						<h5 class="bottom-about__title">
+							<span class="bottom-about__title--red">Залиште заявку</span> і почніть <br>
+							заробляти вже сьогодні
+						</h5>
+						<a href="#" data-popup="#popup-form" class="bottom-about__button button button--fw">залишити заявку</a>
+					</div>
+				</div>
+			</section>
+			<div class="page__map map">
+				<div class="map__container">
+					<h2 class="map__title">
+						З нами вже заробляють понад 10 країн світу
+						та безліч підприємців України
+					</h2>
+					<div data-watch data-watch-once data-watch-margin="-200px" class="map__image map__image-pc _animation-block">
+						<img src="img/map/map.webp" class="map__picture" alt="Image">
+					</div>
+					<div data-watch data-watch-once data-watch-margin="-200px" class="map__image map__image-mob _animation-block">
+						<img src="img/map/map-mob.webp" class="map__picture" alt="Image">
+					</div>
+				</div>
+			</div>
+			<section class="page__question question">
+				<div data-watch data-watch-once data-watch-margin="-200px" class="question__container _animation-block">
+					<div class="question__image">
+						<img src="img/icons/contact.svg" class="question__picture" alt="Image">
+					</div>
+					<h5 class="question__title">
+						Залишились питання?
+					</h5>
+					<p class="question__text">
+						Задайте їх нашому менеджеру
+					</p>
+					<form class="question__form form-question">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше ім’я" class="form-question__input input">
+						<input autocomplete="off" type="tel" name="form[]" placeholder="Ваше питання" class="form-question__input input">
+						<button type="button" class="form-question__button button button--fw">задати питання</button>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -152,8 +434,196 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.5403131426287!2d36.3193019!3d49.944966199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270b015e94431b%3A0x18af6126fc8fd76b!2z0L_RgNC-0YHQvy4g0JHQsNC50YDQvtC90LAsIDE3OSwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1suk!2sua!4v1730987241377!5m2!1suk!2sua" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer__map"></iframe>
 			</div>
 		</footer>
+		<div id="popup-form" aria-hidden="true" class="popup-form popup">
+			<div class="popup-form__wrapper popup__wrapper">
+				<div class="popup-form__content popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M26.25 8.75L8.75 26.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M8.75 8.75L26.25 26.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class="popup-form__body body-popup-form">
+						<h5 class="body-popup-form__title">
+							Залиште заявку
+						</h5>
+						<div class="body-popup-form__form">
+							<input autocomplete="off" type="text" name="form[]" placeholder="Ваше Ім’я" class="body-popup-form__input input">
+							<input autocomplete="off" type="email" name="form[]" placeholder="Ваш E-Mail" class="body-popup-form__input input">
+							<input autocomplete="off" type="phone" name="form[]" placeholder="Ваш номер телефону" class="body-popup-form__input input">
+							<div class="body-popup-form__category category-popup-form">
+								<div class="category-popup-form__text">
+									Оберіть вид співпраці
+								</div>
+								<div class="category-popup-form__body">
+									<div class="category-popup-form__checkbox checkbox">
+										<input id="popup-form_1" class="checkbox-popup-form__input checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="popup-form_1" class="checkbox-popup-form__lable checkbox__label"><span class="checkbox-popup-form__text checkbox__text">Дропшипинг</span></label>
+									</div>
+									<div class="category-popup-form__checkbox checkbox">
+										<input id="popup-form_2" class="checkbox-popup-form__input checkbox__input" type="checkbox" value="2" name="form[]">
+										<label for="popup-form_2" class="checkbox-popup-form__lable checkbox__label"><span class="checkbox-popup-form__text checkbox__text">Оптові продажі</span></label>
+									</div>
+									<div class="category-popup-form__checkbox checkbox">
+										<input id="popup-form_3" class="checkbox-popup-form__input checkbox__input" type="checkbox" value="3" name="form[]">
+										<label for="popup-form_3" class="checkbox-popup-form__lable checkbox__label"><span class="checkbox-popup-form__text checkbox__text">Дилерство</span></label>
+									</div>
+									<div class="category-popup-form__checkbox checkbox">
+										<input id="popup-form_4" class="checkbox-popup-form__input checkbox__input" type="checkbox" value="4" name="form[]">
+										<label for="popup-form_4" class="checkbox-popup-form__lable checkbox__label"><span class="checkbox-popup-form__text checkbox__text">Блогерство</span></label>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="body-popup-form__button button button--fw">
+								Залишити заявку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-category" aria-hidden="true" class="popup-category popup">
+			<div class="popup-category__wrapper popup__wrapper">
+				<div class="popup-category__content popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M26.25 8.75L8.75 26.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M8.75 8.75L26.25 26.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class="popup-category__body body-popup-category">
+						<h5 class="body-popup-category__title body-popup-category__title_01">
+							Будь ласка, оберіть один або більше видів діяльності, щоб отримати пропозицію.
+						</h5>
+						<h5 class="body-popup-category__title body-popup-category__title_02">
+							Ми підготуватили варіанти співпраці, які
+							найкраще підійдуть вам:
+						</h5>
+						<div class="body-popup-category__slider slider-popup-category swiper">
+							<div class="slider-popup-category__pagination swiper-pagination"></div>
+							<div class="slider-popup-category__wrapper swiper-wrapper">
+								<div id="dropshipping" class="slider-popup-category__slide swiper-slide">
+									<div class="body-popup-category__item item-popup-category item-category">
+										<div div class="item-category__top">
+											<h4 class="item-category__title">Дропшипінг</h4>
+											<div class="item-category__image">
+												<img src="img/category/01.svg" class="item-category__picture item-category__picture-01" alt="Image">
+											</div>
+										</div>
+										<ul class="item-category__list">
+											<li class="item-popup-category__item item-category__item">
+												Допомагаємо розмістити наш товар на Вашому інтерет ресурсі
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Отримуєте заявку і продаєте товар
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Ми відправляємо товар Вашому клієнту з нашого складу
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Ви отримуєте свою комісію не виходячи з дому
+											</li>
+										</ul>
+										<button type="button" class="item-category__button button">
+											прайс дропшиппінг
+										</button>
+									</div>
+								</div>
+								<div id="wholesale" class="slider-popup-category__slide swiper-slide">
+									<div class="body-popup-category__item item-category">
+										<div div class="item-category__top">
+											<h4 class="item-category__title">ОПТ</h4>
+											<div class="item-category__image">
+												<img src="img/category/02.svg" class="item-category__picture item-category__picture-02" alt="Image">
+											</div>
+										</div>
+										<ul class="item-category__list">
+											<li class="item-popup-category__item item-category__item">
+												Купуєте товар собі на склад
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Особисто переконуєтеся у високій якості продукції
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Презентуєте товар своїм клієнтам,
+												що дасть змогу легко робити продажі
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Отримуєте максимальну комісію, збільшуючи свій дохід
+											</li>
+										</ul>
+										<button type="button" class="item-category__button button">
+											оптовий прайс
+										</button>
+									</div>
+								</div>
+								<div id="dealership" class="slider-popup-category__slide swiper-slide">
+									<div class="body-popup-category__item item-category">
+										<div div class="item-category__top">
+											<h4 class="item-category__title">Дилерство</h4>
+											<div class="item-category__image">
+												<img src="img/category/03.svg" class="item-category__picture item-category__picture-03" alt="Image">
+											</div>
+										</div>
+										<ul class="item-category__list">
+											<li class="item-popup-category__item item-category__item">
+												Укладаємо офіційний договір
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Закріплюємо за вами особистого
+												менеджера
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Надаємо рекламну підтримку
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Отримуєте дилерську знижку
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Приводимо до вас клієнтів
+											</li>
+										</ul>
+										<button type="button" class="item-category__button button">
+											дилерський прайс
+										</button>
+									</div>
+								</div>
+								<div id="blogging" class="slider-popup-category__slide swiper-slide">
+									<div class="body-popup-category__item item-category">
+										<div div class="item-category__top">
+											<h4 class="item-category__title">Блогерство</h4>
+											<div class="item-category__image">
+												<img src="img/category/04.svg" class="item-category__picture item-category__picture-04" alt="Image">
+											</div>
+										</div>
+										<ul class="item-category__list">
+											<li class="item-popup-category__item item-category__item">
+												Надаємо наше обладнання
+												для реклами
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Можливість отримувати кешбек з кожного замовлення вашої аудиторії
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Якісний товар, ви отримаєте тільки позитивні відгуки від аудиторії
+											</li>
+											<li class="item-popup-category__item item-category__item">
+												Широкий асортимент товару-підійде під більшість каналів
+											</li>
+										</ul>
+										<button type="button" class="item-category__button button">
+											Прайс для блогерів
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20241107195807"></script>
+	<script src="js/app.min.js?_v=20241114172040"></script>
 </body>
 
 </html>
