@@ -16,7 +16,7 @@
 body,
 html {
   height: 100%;
-  min-width: 390px
+  min-width: 360px
 }
 body {
   color: #000;
@@ -529,7 +529,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem
+  gap: .5rem
 }
 .header__logo {
   margin-left: .8125rem
@@ -1038,6 +1038,9 @@ body::after {
   display: none!important
 }
 @media (min-width:29.99875em) {
+  .header__container {
+    gap: 2rem
+  }
   .main__button {
     max-width: 22.75rem
   }
@@ -1912,7 +1915,7 @@ body::after {
     background: url(../img/main/bg-mob.webp) no-repeat center center/cover
   }
 }
-@media (max-width:24.375em) {
+@media (max-width:22.5em) {
   .form-offers__checkbox {
     min-height: 6.1875rem
   }
@@ -2226,8 +2229,8 @@ body::after {
     height: clamp(11.5625rem ,4.8239555256rem + 22.4618149146vw ,18.75rem)
   }
 }
-@media (min-width:24.375em)and (max-width:48em) {
+@media (min-width:22.5em)and (max-width:48em) {
   .form-offers__checkbox {
-    min-height: clamp(5.1875rem ,7.2192460317rem + -4.2328042328vw ,6.1875rem)
+    min-height: clamp(5.1875rem ,7.0698529412rem + -3.9215686275vw ,6.1875rem)
   }
 }
